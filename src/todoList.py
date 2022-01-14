@@ -9,7 +9,11 @@ from botocore.exceptions import ClientError
 
 def get_table(dynamodb=None):
     if not dynamodb:
-        URL = os.environ['ENDPOINT_OVERRIDE']
+        # URL = os.environ['ENDPOINT_OVERRIDE']
+        try:
+            URL = os.environ['ENDPOINT_OVERRIDE']
+        except Exception as e:
+            print('I got a error in get_table - reason "%s"' % str(e))
         if URL:
             print('URL dynamoDB:'+URL)
             boto3.client = functools.partial(boto3.client, endpoint_url=URL)
@@ -33,7 +37,6 @@ def get_item(key, dynamodb=None):
     except ClientError as e:
         print(e.response['Error']['Message'])
     else:
-        print('Result getItem:'+str(result))
         if 'Item' in result:
             return result['Item']
 
@@ -114,7 +117,6 @@ def delete_item(key, dynamodb=None):
         print(e.response['Error']['Message'])
     else:
         return
-
 
 def create_todo_table(dynamodb):
     # For unit testing
