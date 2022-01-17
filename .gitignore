@@ -14,4 +14,3 @@ todo-list-aws/
 ./lib64
 ./share
 pyvenv.cfg
-pytest.ini
