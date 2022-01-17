@@ -5,3 +5,12 @@ tests
 pyenvunittests
 .coverage
 coverage.xml
+todo-list-aws/
+.cache/
+.pytest_cache/
+./bin
+./include
+./lib
+./lib64
+./share
+pyvenv.cfg
