@@ -203,7 +203,7 @@ class TestDatabaseFunctions(unittest.TestCase):
     def test_cra_table_todo(self):
         print ('---------------------')
         print ('Start: test_cra_table_todo')
-        os.environ["ENDPOINT_OVERRIDE"] = "http://localhost:8000"
+        os.environ["ENDPOINT_OVERRIDE"]"
         from src.todoList import get_table
         table = get_table(None)
         print('Table name:' + str(table))
