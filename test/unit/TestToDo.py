@@ -80,7 +80,7 @@ class TestDatabaseFunctions(unittest.TestCase):
         from src.todoList import put_item
         # Table mock
         self.assertRaises(Exception, put_item("", self.dynamodb))
-        self.assertRaises(Exception, put_item("", self.dynamodb))
+        # self.assertRaises(Exception, put_item("", self.dynamodb))
         print ('End: test_put_todo_error')
 
     def test_get_todo(self):
@@ -199,6 +199,17 @@ class TestDatabaseFunctions(unittest.TestCase):
         # Testing file functions
         self.assertRaises(TypeError, delete_item("", self.dynamodb))
         print ('End: test_delete_todo_error')
+        
+    def test_cra_table_todo(self):
+        print ('---------------------')
+        print ('Start: test_cra_table_todo')
+        os.environ["ENDPOINT_OVERRIDE"] = "http://localhost:8000"
+        from src.todoList import get_table
+        table = get_table(None)
+        print('Table name:' + str(table))
+        self.assertIsNotNone(table)
+        os.environ["ENDPOINT_OVERRIDE"] = ""
+        print ('End: test_cra_table_todo')
 
 
 if __name__ == '__main__':
