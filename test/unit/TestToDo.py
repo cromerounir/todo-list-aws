@@ -200,13 +200,6 @@ class TestDatabaseFunctions(unittest.TestCase):
         self.assertRaises(TypeError, delete_item("", self.dynamodb))
         print ('End: test_delete_todo_error')
         
-    def test_cra_table_todo(self):
-        print ('---------------------')
-        print ('Start: test_cra_table_todo')
-        from src.todoList import get_table
-        table = get_table(None)
-        print('Table name:' + str(table))
-        print ('End: test_cra_table_todo')
 
 
 if __name__ == '__main__':
