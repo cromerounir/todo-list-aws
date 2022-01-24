@@ -26,7 +26,8 @@ pipeline {
                     }
                 }
             }
-        stage('Build') {
+        }
+       stage('Build') {
             steps{
                 echo 'Package sam application:'
                 sh "bash pipelines/common-steps/build.sh"
