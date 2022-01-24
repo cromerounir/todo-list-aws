@@ -161,7 +161,7 @@ class TestDatabaseFunctions(unittest.TestCase):
         # Testing file functions
         # Table mock
         # responsePut = put_item(self.text, self.dynamodb)
-         print ('Response PutItem' + str(responsePut))
+        print ('Response PutItem' + str(responsePut))
         self.assertRaises(
             Exception,
             update_item(
