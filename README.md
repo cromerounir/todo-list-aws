@@ -112,7 +112,9 @@ python test/unit/TestToDo.py
 ```
 Otra alternativa es ejecutar los test desde la raíz del proyecto invocando a los scripts alojados dentro de la carpeta pipelines:
 ```bash
-# Ejecución Pruebas
+# Ejecución Pruebas.
+
+# Los resultados los he dejado en los archivos "Unit_Test.txt, static_test.txt e integration.txt"
 
 ## Configuración del entorno virtual
 pipelines/PIPELINE-FULL-STAGING/setup.sh
@@ -130,6 +132,8 @@ pipelines/common-steps/integration.sh
 ## Pipelines
 
 Para la implementación del CI/CD de la aplicación se utilizan los siguientes Pipelines:
+
+
 *	**PIPELINE-FULL-STAGING**: (PIPELINE-FULL-STAGING/Jenkinsfile) Este pipeline es el encargado de configurar el entorno de staging y ejecutar las pruebas
 *	**PIPELINE-FULL-PRODUCTION**: (PIPELINE-FULL-PRODUCTION/Jenkinsfile) Este pipeline es el encargado de configurar el entorno de production y ejecutar las pruebas
 *	**PIPELINE-FULL-CD**: este pipeline es el encargado de enganchar los pipelines de staging y production,  con el objetivo de completar un ciclo de despliegue continuo desde un commit al repositorio de manera automática.
