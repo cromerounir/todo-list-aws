@@ -14,3 +14,5 @@ todo-list-aws/
 ./lib64
 ./share
 pyvenv.cfg
+.test/unit/TestToDo_orig.py
+./src/todoList_orig.py
