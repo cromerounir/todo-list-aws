@@ -8,6 +8,7 @@ import json
 import pytest
 
 BASE_URL = os.environ.get("BASE_URL")
+#Para correrlo en local hay que especificar la URL
 #BASE_URL = "https://6tdckek9cb.execute-api.us-east-1.amazonaws.com/Prod"
 DEFAULT_TIMEOUT = 2  # in secs
 
