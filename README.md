@@ -114,7 +114,7 @@ Otra alternativa es ejecutar los test desde la raíz del proyecto invocando a lo
 ```bash
 # Ejecución Pruebas.
 
-# Los resultados los he dejado en los archivos "Unit_Test.txt, static_test.txt e integration.txt"
+# Los resultados los he dejado en los archivos "Unit_Test.txt, static_test.txt e integration.txt de la carpeta logs"
 
 ## Configuración del entorno virtual
 pipelines/PIPELINE-FULL-STAGING/setup.sh
