@@ -27,6 +27,20 @@ Globals:
     
 Resources:
   
+  TranslateTodoFunction:
+    Type: AWS::Serverless::Function 
+    Properties:
+      CodeUri: src/
+      Role: !Sub "arn:aws:iam::${AWS::AccountId}:role/LabRole"
+      Handler: translate.translate
+      Runtime: python3.7
+      Events:
+        Create:
+          Type: Api
+          Properties:
+            Path: /todos/{id}/{language}
+            Method: get
+  
   CreateTodoFunction:
     Type: AWS::Serverless::Function 
     Properties:
